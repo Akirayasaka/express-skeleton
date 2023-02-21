@@ -1,5 +1,9 @@
 # express-skeleton
 
+- TypeScript + ESLint + Prettier
+
+## 專案結構 
+
 | 項目 | 說明 |
 | -------- | -------- | 
 | configs | 相關設定檔案(ex: SQL連線資料) |
