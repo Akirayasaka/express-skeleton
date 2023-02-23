@@ -17,6 +17,6 @@ export const fetchAllProducts = async () => {
   return mockData;
 };
 
-export const fetchProduct = async () => {
-  return mockData.filter((item) => item.id === 1);
+export const fetchProduct = async (id: number) => {
+  return mockData.filter((item) => item.id === id);
 };

@@ -18,7 +18,7 @@ export const getAllProduct = async (req: Request, res: Response) => {
 export const getProductById = async (req: Request, res: Response) => {
   try {
     apiResponse.success = true;
-    apiResponse.result = await services.demo.get();
+    apiResponse.result = await services.demo.get(1);
     res.json(apiResponse);
   } catch (ex) {
     apiResponse.message = `${ex}`;
