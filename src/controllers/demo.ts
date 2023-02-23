@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { ParamsDictionary } from 'express-serve-static-core';
 import services from '../services';
 import { apiResponse } from '../interfaces/IApiResponse';
-import { IProduct } from 'interfaces/IDemo';
+import { IProduct } from '../interfaces/IDemo';
 
 /** 取得全部產品 */
 export const getAllProduct = async (req: Request, res: Response) => {
