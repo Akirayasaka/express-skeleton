@@ -1,6 +1,6 @@
 import express from 'express';
-import { contentType } from '../middlewares/request/checkHeaders';
-import * as demo from '../controllers/demo';
+import { contentType } from '@src/middlewares/request/checkHeaders';
+import * as demo from '@src/controllers/demo';
 
 const router = express.Router();
 

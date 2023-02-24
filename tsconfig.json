@@ -1,4 +1,10 @@
 {
+    "ts-node": {
+        "transpileOnly": true,
+        "require": [
+            "typescript-transform-paths/register"
+        ],
+    },
     "compilerOptions": {
         "target": "es6",
         "lib": [
@@ -10,7 +16,7 @@
         "emitDecoratorMetadata": true,
         "module": "commonjs",
         "moduleResolution": "node",
-        "baseUrl": "src/",
+        "baseUrl": "./",
         "typeRoots": [
             "./src/types",
             "./node_modules/@types"
@@ -24,7 +30,23 @@
         "strict": true,
         "noImplicitReturns": true,
         "noFallthroughCasesInSwitch": true,
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "paths": {
+            "@src/*": [
+                "src/*"
+            ]
+        },
+        "plugins": [
+            // Transform paths in output .js files
+            {
+                "transform": "typescript-transform-paths"
+            },
+            // Transform paths in output .d.ts files (Include this line if you output declarations files)
+            {
+                "transform": "typescript-transform-paths",
+                "afterDeclarations": true
+            }
+        ]
     },
     "include": [
         "./src/**/*.tsx",

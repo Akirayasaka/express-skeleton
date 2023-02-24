@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { apiResponse } from '../../interfaces/IApiResponse';
+import { apiResponse } from '@src/interfaces/IApiResponse';
 
 /** 檢查 request headers content-type */
 export const contentType = (type: string) => {
