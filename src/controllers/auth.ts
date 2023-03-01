@@ -5,6 +5,7 @@ import { apiResponse } from '@src/interfaces/IApiResponse';
 export const register = async (req: Request, res: Response) => {
   try {
     apiResponse.success = true;
+    apiResponse.result = [];
     res.json(apiResponse);
   } catch (ex) {
     apiResponse.message = `${ex}`;
