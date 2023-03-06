@@ -17,7 +17,7 @@ export const getAllProduct = async (req: Request, res: Response) => {
 };
 
 /** 根據ID取得單筆產品
- * req: { id: number }
+ * request body: { id: number }
  */
 export const getProductById = async (
   req: Request<ParamsDictionary, unknown, IProduct>,
