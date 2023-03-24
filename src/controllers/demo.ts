@@ -1,8 +1,9 @@
 import { Request, Response } from 'express';
 import { ParamsDictionary } from 'express-serve-static-core';
-import services from '@src/services';
 import { apiResponse } from '@src/interfaces/IApiResponse';
 import { IProduct } from '@src/interfaces/IDemo';
+import { HttpStatusCode } from '@src/enums/HttpStatusCode';
+import services from '@src/services';
 
 /** 取得全部產品 */
 export const getAllProduct = async (req: Request, res: Response) => {
@@ -12,7 +13,7 @@ export const getAllProduct = async (req: Request, res: Response) => {
     res.json(apiResponse);
   } catch (ex) {
     apiResponse.message = `${ex}`;
-    res.status(500).json(apiResponse);
+    res.status(HttpStatusCode.INTERNAL_SERVER_ERROR).json(apiResponse);
   }
 };
 
@@ -29,6 +30,6 @@ export const getProductById = async (
     res.json(apiResponse);
   } catch (ex) {
     apiResponse.message = `${ex}`;
-    res.status(500).json(apiResponse);
+    res.status(HttpStatusCode.INTERNAL_SERVER_ERROR).json(apiResponse);
   }
 };
