@@ -1,7 +1,7 @@
-import { Request, Response } from 'express';
-import { ParamsDictionary } from 'express-serve-static-core';
-import { apiResponse } from '@src/interfaces/IApiResponse';
+import type { Request, Response } from 'express';
+import type { ParamsDictionary } from 'express-serve-static-core';
 import type { IProduct } from '@src/interfaces/IDemo';
+import { apiResponse } from '@src/interfaces/IApiResponse';
 import { HttpStatusCode } from '@src/enums/HttpStatusCode';
 import services from '@src/services';
 

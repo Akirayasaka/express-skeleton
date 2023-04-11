@@ -1,4 +1,4 @@
-import { Request, Response } from 'express';
+import type { Request, Response } from 'express';
 import { apiResponse } from '@src/interfaces/IApiResponse';
 
 /** 註冊 */
